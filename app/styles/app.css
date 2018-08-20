@@ -1,0 +1,81 @@
+body {
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    min-width: 1420px;
+    background-image: url('https://images.wallpaperscraft.ru/image/oblaka_nebo_solntse_123054_2560x1080.jpg');
+    background-attachment: fixed;
+}
+
+.ui.header.main {
+    padding: 10px;
+    padding-top: 7px;
+    padding-left: 50px;
+    background-color: rgba(140, 127, 187, 0.479);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.fon {
+    background-color: rgba(239, 255, 255, 0.479);
+    /*height: 86vh;*/
+    min-height: 86vh;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.ui.cards {    
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ui.card {
+    width: 200px;
+    margin: 0px;
+    user-select: none;
+}
+
+.menu {
+    padding-left: 50px;
+}
+
+.tab {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.terr {
+    margin-top: 8px;
+    margin-right: 20px;    
+    float: right;
+}
+
+.ui.toggle.checkbox {
+    float: right;
+    margin-right: 20px;
+}
+
+.ui.fluid.dropdown {
+    background-color: inherit;
+    width: 200px;
+}
+
+.ui.card > .content > .image {
+    margin: 10px;
+}
+
+.today {
+    padding-top: 18px;
+    padding-right: 10px;    
+    float: right;
+    user-select: none;
+}
+
+.content > .temperature {
+    box-align: center;
+    font-size: 25px;
+    margin: 10px;
+}

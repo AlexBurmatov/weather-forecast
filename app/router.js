@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('week');
+  this.route('two-week');
+  this.route('month');
 });
 
 export default Router;

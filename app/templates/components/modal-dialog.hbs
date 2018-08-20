@@ -1,0 +1,127 @@
+<div class="ui small modal">
+  <i class="close icon"></i>
+  <div class="header">
+    {{dateForShow}}
+    <div class="ui toggle checkbox">
+        {{input type="checkbox" name="public" checked=isMeteorolog }}
+        <label>Режим метеоролога</label>
+    </div>
+  </div>
+    
+  <div class="image content">
+    <div class="ui small image">
+      <img src={{weatherImage}}>
+    </div>
+    <div class="description">
+      <div class="ui header">Параметры погоды:</div>
+      {{#if isMeteorolog }}       
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Температура воздуха:</label>
+                            {{input type="text" name="temperature" value=model.temperature placeholder="0"}}
+                        </div>
+                        <div class="field">
+                            <label>Облачность:</label>
+                            <div class="ui selection dropdown">
+                                {{input type="hidden" name="cloudy" value=model.cloudy}}
+                                <i class="dropdown icon"></i>
+                                <div class="default text">{{model.cloudy}}</div>
+                                <div class="menu">                                    
+                                    <div class="item" data-value="Ясно">Ясно</div>
+                                    <div class="item" data-value="Малооблачно">Малооблачно</div>
+                                    <div class="item" data-value="Переменная облачность">Переменная облачность</div>
+                                    <div class="item" data-value="Облачно с прояснениями">Облачно с прояснениями</div>
+                                    <div class="item" data-value="Пасмурно">Пасмурно</div>
+                                </div>                                
+                            </div>
+                            <script>
+                                $('.ui.dropdown').dropdown();
+                            </script>
+                        </div>
+                        <div class="field">
+                            <label>Осадки:</label>
+                            <div class="ui selection dropdown">
+                                {{input type="hidden" name="weatherEvent" value=model.weatherEvent}}
+                                <i class="dropdown icon"></i>
+                                <div class="default text">{{model.weatherEvent}}</div>
+                                <div class="menu">                                    
+                                    <div class="item" data-value="Без осадков">Без осадков</div>
+                                    <div class="item" data-value="Небольшой дождь">Небольшой дождь</div>
+                                    <div class="item" data-value="Временами дождь">Временами дождь</div>
+                                    <div class="item" data-value="Ливень">Ливень</div>
+                                    <div class="item" data-value="Гроза">Гроза</div>
+                                    <div class="item" data-value="Град">Град</div>
+                                    <div class="item" data-value="Снег">Снег</div>
+                                    <div class="item" data-value="Мокрый снег">Мокрый снег</div>
+                                    <div class="item" data-value="Туман">Туман</div>
+                                </div>                                
+                            </div>
+                            <script>
+                                $('.ui.dropdown').dropdown();
+                            </script>
+                        </div>
+                        <div class="field">
+                            <label>Атмосферное давление:</label>
+                            {{input type="text" name="preasure" value=model.preasure placeholder="750"}}
+                        </div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Ветер:</label>
+                            <div class="ui selection dropdown">
+                                {{input type="hidden" name="windDirection" value=model.windDirection}}
+                                <i class="dropdown icon"></i>
+                                <div class="default text">{{model.windDirection}}</div>
+                                <div class="menu">                                    
+                                    <div class="item" data-value="Ю">Ю</div>
+                                    <div class="item" data-value="ЮЗ">ЮЗ</div>
+                                    <div class="item" data-value="ЮВ">ЮВ</div>
+                                    <div class="item" data-value="С">С</div>
+                                    <div class="item" data-value="СЗ">СЗ</div>
+                                    <div class="item" data-value="СВ">СВ</div>
+                                    <div class="item" data-value="З">З</div>
+                                    <div class="item" data-value="В">В</div>
+                                </div>                                
+                            </div>                            
+                            <script>
+                                $('.ui.dropdown').dropdown();
+                            </script>
+                        </div>
+                        <div class="field">
+                            <label>Скорость ветра:</label>
+                            {{input type="text" name="windVelocity" value=model.windVelocity placeholder="0"}}
+                        </div>
+                        <div class="field">
+                            <label>Скорость ветра в порывах:</label>
+                            {{input type="text" name="windVelocityExtrem" value=model.windVelocityExtrem placeholder="0"}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+      {{else}}
+        <p><b>Температура воздуха:</b> {{model.temperature}}°</p>
+        <p><b>Облачность:</b> {{model.cloudy}}</p>
+        <p><b>Осадки:</b> {{model.weatherEvent}}</p>
+        <p><b>Атмосферное давление:</b> {{model.preasure}} мм рт. ст.</p>
+        <p><b>Ветер:</b> {{model.windDirection}}</p>
+        <p><b>Скорость ветра:</b> {{model.windVelocity}} м/с</p>
+        <p><b>Скорость ветра в порывах:</b> {{model.windVelocityExtrem}} м/с</p>
+      {{/if}}
+    </div>
+  </div>
+  <!--#if isMeteorolog }}
+  <div class="actions">
+    <div class="ui positive right labeled icon button" {{action "saveChanges"}}>
+      Сохранить
+      <i class="checkmark icon"></i>
+    </div>
+    <div class="ui negative deny button" {{action "cancelChanges"}}>
+      Отмена
+    </div>
+  </div>
+  /if}}-->
+</div>

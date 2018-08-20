@@ -1,5 +1,15 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<span class="terr">{{terr-selector}}</span>
+<h1 class="ui header main">Прогноз погоды</h1>
 
-{{outlet}}
+{{modal-dialog}}
+<div class="fon">
+    <div class="ui top attached tabular menu">
+        {{#link-to "week" class="item"}} Прогноз на 7 дней {{/link-to}}
+        {{#link-to "two-week" class="item"}} Прогноз на 14 дней {{/link-to}}
+        {{#link-to "month" class="item"}} Прогноз на месяц {{/link-to}}
+    </div>
+    <div class="ui bottom attached active tab">
+        {{outlet}}
+    </div>
+</div>
+
