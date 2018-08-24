@@ -1,10 +1,13 @@
 body {
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    min-width: 1420px;
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
     background-image: url('https://images.wallpaperscraft.ru/image/oblaka_nebo_solntse_123054_2560x1080.jpg');
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
 }
 
 .ui.header.main {
@@ -14,17 +17,16 @@ body {
     background-color: rgba(140, 127, 187, 0.479);
     color: white;
     border-radius: 8px;
-    margin-bottom: 0;
+    margin: 10px 0 0 0;
     user-select: none;
 }
 
 .fon {
     background-color: rgba(239, 255, 255, 0.479);
-    /*height: 86vh;*/
-    min-height: 86vh;
     border-radius: 8px;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    
 }
 
 .ui.cards {    
@@ -33,8 +35,8 @@ body {
 }
 
 .ui.card {
-    width: 200px;
-    margin: 0px;
+    width: 150px;
+    margin: 1px;
     user-select: none;
 }
 
@@ -78,4 +80,22 @@ body {
     box-align: center;
     font-size: 25px;
     margin: 10px;
+}
+
+.ui.card > .content > .description {
+    height: 30px;
+}
+
+.ui.card.small > .content {
+    font-size: 10px;
+}
+
+.ui.card.small > .extra.content {
+    font-size: 8px;
+}
+
+.ui.card.small {
+    width: 105px;
+    margin: 1px;
+    user-select: none;
 }
